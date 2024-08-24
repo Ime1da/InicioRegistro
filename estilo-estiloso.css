@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: #c9d6ff;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.CuadroConTodo{
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 10px 10px 15px rgba(255, 0, 0, 0.445);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+    transition: box-shadow 0.5s ease;
+}
+
+.CuadroConTodo p{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+
+.CuadroConTodo span{
+    font-size: 12px;
+}
+
+.CuadroConTodo a{
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+
+.CuadroConTodo button{
+    background-color: #2400ff;
+    color: #fff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.CuadroConTodo button.hidden{
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.CuadroConTodo form{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.CuadroConTodo input{
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+
+.form-CuadroConTodo{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-in{
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.CuadroConTodo.active .sign-in{
+    transform: translateX(100%);
+}
+
+.sign-up{
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.CuadroConTodo.active .sign-up{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+
+@keyframes move{
+    0%, 49.99%{
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100%{
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+
+.CuadroIngresar-CuadroConTodo{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 50px ;
+    z-index: 1000;
+}
+
+.CuadroConTodo.active .CuadroIngresar-CuadroConTodo{
+    transform: translateX(-100%);
+    border-radius: 50px;
+}
+
+.CuadroIngresar{
+    background-color: #a9ceff;
+    height: 100%;
+    background: linear-gradient(to right, #a9ceff, #a9ceff);
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.CuadroConTodo.active .CuadroIngresar{
+    transform: translateX(50%);
+}
+
+.CuadroIngresar-panel{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.CuadroIngresar-left{
+    transform: translateX(-200%);
+}
+
+.CuadroConTodo.active .CuadroIngresar-left{
+    transform: translateX(0);
+}
+
+.CuadroIngresar-right{
+    right: 0;
+    transform: translateX(0);
+}
+
+.CuadroConTodo.active .CuadroIngresar-right{
+    transform: translateX(200%);
+}
+
+
+
+
+
+#tituloso{
+    font-size: 50px;
+    font-family: 'Fredoka', sans-serif;
+    color:#004aad;
+}
+
+#lec{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.CuadroConTodo.shadow-left {
+    box-shadow: 10px 10px 15px rgba(255, 0, 0, 0.445);
+}
+
+.CuadroConTodo.shadow-right {
+    box-shadow: -10px 10px 15px rgba(255, 0, 0, 0.445);
+}
+
+
+
+
+
+.BarraAzul{    
+    margin-top:0px;
+    margin-left: 20px;
+    width: 500px;
+    height: 130px;
+    background: #595bff;
+    border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%  ;
+
+    position: absolute;
+    overflow: hidden;
+    top: 0px; /* Distancia desde la parte arriba */
+    right: -150px; /* Distancia desde la parte derecha */
+   
+    transition: transform 0.6s ease;
+
+}
+
+.BarraRoja{    
+    margin-top:0px;
+    margin-left: 20px;
+    width: 600px;
+    height: 75px;
+    background: #ff1616;
+    border-radius: 6% 6% 6% 6% / 50% 50% 50% 50%  ;
+
+    position: absolute;
+    overflow: hidden;
+    z-index: 2;
+    top: 100px; /* Distancia desde la parte arriba */
+    right: -150px; /* Distancia desde la parte derecha */
+   
+    transition: transform 0.7s ease;
+
+}
+
+.BarraSalmon{    
+    margin-top:0px;
+    margin-left: 20px;
+    width: 500px;
+    height: 100px;
+    background: #ff6666;
+    border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%  ;
+
+    position: absolute;
+    z-index: 2;
+    bottom: 0px; /* Distancia desde la parte arriba */
+    left: -200px; /* Distancia desde la parte derecha */
+   
+    transition: transform 0.7s ease;
+
+}
+
+
+.BarraAzul.izquierda{
+    transform: translateX(-90vw);
+}
+.BarraAzul.derecha{
+    transform: translateX(0);
+}
+
+.BarraRoja.izquierda{
+    transform: translateX(-90vw);
+}
+.BarraRoja.derecha{
+    transform: translateX(0);
+}
+
+.BarraSalmon.izquierda{
+    transform: translateX(0);
+}
+.BarraSalmon.derecha{
+    transform: translateX(90vw);
+}

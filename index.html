@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="estilo-estiloso.css">
+    <title>BisonSkills Unirse</title>
+    <link rel="icon" href="BisonSkillsIcon.png" type="image/png">
+
+</head>
+
+<body>
+
+    <div class="BarraAzul" id="BarraAzul"></div>
+    <div class="BarraRoja" id="BarraRoja"></div>
+    <div class="BarraSalmon" id="BarraSalmon"></div>
+
+
+
+
+    <div class="CuadroConTodo" id="CuadroConTodo">
+        <div class="form-CuadroConTodo sign-up">
+            <form>
+                <h1 id="tituloso">BisonSkills</h1>
+                <p id="lec">Registrate</p>
+                <p id="lec"> y comienza a aprender</p>
+                <img src="2.png" alt="Bisonte recomendando" width="250" height="250">
+                <i>¿Ya tienes una cuenta?</i>
+                <a href="#" id="login">Inicia Sesion</a>
+            </form>
+        </div>
+        <div class="form-CuadroConTodo sign-in">
+            <form>
+                <h1 id="tituloso">BisonSkills</h1>
+                <p id="lec">Inicia sesion</p>
+                <p id="lec">y continua aprendiendo</p>
+                <img src="1.jpg" alt="Bisonte aprendiendo" width="250" height="250" >
+
+            </form>
+        </div>
+        <div class="CuadroIngresar-CuadroConTodo">
+            <div class="CuadroIngresar">
+                <div class="CuadroIngresar-panel CuadroIngresar-left">
+
+                    <input type="text" placeholder="Nombre">
+                    <input type="text" placeholder="Apellido">
+                    <input type="email" placeholder="Correo">
+                    <input type="password" placeholder="contraseña">
+                    <button>Registrarme</button>
+                </div>
+                <div class="CuadroIngresar-panel CuadroIngresar-right">
+
+                    <h1>Iniciar Sesion</h1>
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <a href="#">Forget Your Password?</a>
+                    <button>Inicia Sesion</button>
+                    <a>¿No tienes una cuenta?</a>
+                    <a href="#" id="register">Registrate</a>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        const CuadroConTodo = document.getElementById('CuadroConTodo');
+        const registerBtn = document.getElementById('register');
+        const loginBtn = document.getElementById('login');
+        const BarAzul = document.getElementById('BarraAzul');
+        const BarRoja = document.getElementById('BarraRoja');
+        const BarSal = document.getElementById('BarraSalmon');
+
+        registerBtn.addEventListener('click', () => {
+            CuadroConTodo.classList.add("active", "shadow-left");
+            CuadroConTodo.classList.remove("shadow-right");
+            BarAzul.classList.add("izquierda");
+            BarAzul.classList.remove("derecha");
+            BarRoja.classList.add("izquierda");
+            BarRoja.classList.remove("derecha");
+            BarSal.classList.add("derecha");
+            BarSal.classList.remove("izquierda");
+
+        });
+
+        loginBtn.addEventListener('click', () => {
+            CuadroConTodo.classList.add("shadow-right");            
+            CuadroConTodo.classList.remove("active", "shadow-left");
+            BarAzul.classList.add("derecha");
+            BarAzul.classList.remove("izquierda");
+            BarRoja.classList.add("derecha");
+            BarRoja.classList.remove("izquierda");
+            BarSal.classList.add("izquierda");
+            BarSal.classList.remove("derecha");
+
+        });
+    </script>
+</body>
+
+</html>
